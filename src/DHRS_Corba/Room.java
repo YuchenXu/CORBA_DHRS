@@ -1,4 +1,4 @@
-package DHRS;
+package DHRS_Corba;
 
 public class Room {
 	int No_of_room;

@@ -1,4 +1,4 @@
-package DHRS;
+package DHRS_Corba;
 
 /**
  * Interface definition: function.

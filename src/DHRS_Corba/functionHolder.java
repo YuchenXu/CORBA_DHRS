@@ -1,4 +1,4 @@
-package DHRS;
+package DHRS_Corba;
 
 /**
  * Holder class for : function
@@ -11,7 +11,7 @@ final public class functionHolder
     /**
      * Internal function value
      */
-    public DHRS.function value;
+    public DHRS_Corba.function value;
 
     /**
      * Default constructor
@@ -23,7 +23,7 @@ final public class functionHolder
      * Constructor with value initialisation
      * @param initial the initial value
      */
-    public functionHolder(DHRS.function initial)
+    public functionHolder(DHRS_Corba.function initial)
     {
         value = initial;
     }
