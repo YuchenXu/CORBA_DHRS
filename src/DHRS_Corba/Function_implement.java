@@ -1,4 +1,4 @@
-package DHRS_Corba;
+package DHRS;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -55,7 +55,7 @@ public class Function_implement extends functionPOA {
 	}
 
 	public String reserveRoom(int GuestID, String hotel, String RoomType,
-			int checkindate, int checkoutdate) {
+			int checkindate, int checkoutdate, int reserveID) {
 		for(int i=0;i<Roominfo.size();i++){
 			if(Roominfo.get(i).Type_of_room.equals(RoomType)){
 				if(!Roominfo.get(i).Rent_of_room){

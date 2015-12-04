@@ -1,4 +1,4 @@
-package DHRS_Corba;
+package DHRS;
 
 /**
  * Interface definition: function.
@@ -10,7 +10,7 @@ public interface functionOperations
     /**
      * Operation reserveRoom
      */
-    public String reserveRoom(int GuestID, String hotel, String RoomType, int checkindate, int checkoutdate);
+    public String reserveRoom(int GuestID, String hotel, String RoomType, int checkindate, int checkoutdate, int reserveID);
 
     /**
      * Operation cancelRoom

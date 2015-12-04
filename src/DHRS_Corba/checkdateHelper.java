@@ -1,4 +1,4 @@
-package DHRS_Corba;
+package DHRS;
 
 /** 
  * Helper class for : checkdate

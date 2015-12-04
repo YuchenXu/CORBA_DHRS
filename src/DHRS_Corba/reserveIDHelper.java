@@ -1,16 +1,16 @@
 package DHRS;
 
 /** 
- * Helper class for : ID
+ * Helper class for : reserveID
  *  
  * @author OpenORB Compiler
  */ 
-public class IDHelper
+public class reserveIDHelper
 {
     /**
-     * Insert ID into an any
+     * Insert reserveID into an any
      * @param a an any
-     * @param t ID value
+     * @param t reserveID value
      */
     public static void insert(org.omg.CORBA.Any a, int t)
     {
@@ -19,10 +19,10 @@ public class IDHelper
     }
 
     /**
-     * Extract ID from an any
+     * Extract reserveID from an any
      *
      * @param a an any
-     * @return the extracted ID value
+     * @return the extracted reserveID value
      */
     public static int extract( org.omg.CORBA.Any a )
     {
@@ -39,20 +39,20 @@ public class IDHelper
     private static org.omg.CORBA.TypeCode _tc = null;
 
     /**
-     * Return the ID TypeCode
+     * Return the reserveID TypeCode
      * @return a TypeCode
      */
     public static org.omg.CORBA.TypeCode type()
     {
         if (_tc == null) {
             org.omg.CORBA.ORB orb = org.omg.CORBA.ORB.init();
-            _tc = orb.create_alias_tc( id(), "ID", orb.get_primitive_tc( org.omg.CORBA.TCKind.tk_long ) );
+            _tc = orb.create_alias_tc( id(), "reserveID", orb.get_primitive_tc( org.omg.CORBA.TCKind.tk_long ) );
         }
         return _tc;
     }
 
     /**
-     * Return the ID IDL ID
+     * Return the reserveID IDL ID
      * @return an ID
      */
     public static String id()
@@ -60,12 +60,12 @@ public class IDHelper
         return _id;
     }
 
-    private final static String _id = "IDL:DHRS/ID:1.0";
+    private final static String _id = "IDL:DHRS/reserveID:1.0";
 
     /**
-     * Read ID from a marshalled stream
+     * Read reserveID from a marshalled stream
      * @param istream the input stream
-     * @return the readed ID value
+     * @return the readed reserveID value
      */
     public static int read(org.omg.CORBA.portable.InputStream istream)
     {
@@ -76,9 +76,9 @@ public class IDHelper
     }
 
     /**
-     * Write ID into a marshalled stream
+     * Write reserveID into a marshalled stream
      * @param ostream the output stream
-     * @param value ID value
+     * @param value reserveID value
      */
     public static void write(org.omg.CORBA.portable.OutputStream ostream, int value)
     {

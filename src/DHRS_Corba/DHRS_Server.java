@@ -1,4 +1,4 @@
-package DHRS_Corba;
+package DHRS;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
