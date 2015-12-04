@@ -34,7 +34,9 @@ public class Function_implement extends functionPOA {
 		int Available=0;
 		for(int i=0;i<Roominfo.size();i++){
 			if(Roominfo.get(i).Type_of_room.equals(Roomtype)){
-				Available=Roominfo.get(i).No_of_room;
+				if(!Roominfo.get(i).Rent_of_room){
+					Available++;
+				}
 				if(Roominfo.get(i).Rent_of_room){
 					rent++;
 				}
