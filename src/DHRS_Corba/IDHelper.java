@@ -1,4 +1,4 @@
-package DHRS;
+package DHRS_Corba;
 
 /** 
  * Helper class for : ID
