@@ -6,7 +6,7 @@ public class Function_implement extends functionPOA {
 	HashMap<Integer, Room> reservationinfo=new HashMap<Integer, Room>();
 	ArrayList<Room> Roominfo = new ArrayList<Room>();
 	HashMap<Integer, Guest> reservationcheck=new HashMap<Integer, Guest>();
-	int ReservavtionID=0;
+//	int ReservavtionID=0;
 	String hroominfo="";
 	String serviceReport="";
 	String printstaue="";
@@ -65,14 +65,14 @@ public class Function_implement extends functionPOA {
 					Roominfo.get(i).Rent_of_room=true;
 					RoomnumAdown(RoomType);
 					reservationinfo.put(GuestID, Roominfo.get(i));
-					ReservavtionID++;
-					reservationcheck.put(ReservavtionID, Roominfo.get(i).Guests);
+					//ReservavtionID++;
+					reservationcheck.put(reserveID, Roominfo.get(i).Guests);
 					System.out.println();
 					break;
 				}
 			}
 		}
-		return "ResertionRoom Successful!GuesrID: "+GuestID+ "With ReservavtionID: "+ReservavtionID;
+		return "ResertionRoom Successful!GuesrID: "+GuestID+ "With ReservavtionID: "+ reserveID;
 
 	}
 
