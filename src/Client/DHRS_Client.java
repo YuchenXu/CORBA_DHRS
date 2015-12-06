@@ -91,15 +91,15 @@ public class DHRS_Client {
 					System.out.println("Your entry is GuestID:"+guestID+" Hotel: "+hotel+" Roomtype: "+roomtype+
 							" Checkindate: "+checkindate+" Checkoutdate: "+checkoutdate);
 					if(hotel.equals("H1")){
-						H1.reserveRoom(guestID, hotel, roomtype, checkindate, checkoutdate);
+						H1.reserveRoom(guestID, hotel, roomtype, checkindate, checkoutdate, 0); //temp change to eliminate compile error
 						System.out.println(guestID+"reserved! with "+roomtype+" "+checkindate+" to "+checkoutdate+" in "+hotel);
 					}
 					if(hotel.equals("H2")){
-						H2.reserveRoom(guestID, hotel, roomtype, checkindate, checkoutdate);
+						H2.reserveRoom(guestID, hotel, roomtype, checkindate, checkoutdate, 0); //temp change to eliminate compile error
 						System.out.println(guestID+"reserved! with "+roomtype+" "+checkindate+" to "+checkoutdate+" in "+hotel);	
 					}
 					if(hotel.equals("H3")){
-						H3.reserveRoom(guestID, hotel, roomtype, checkindate, checkoutdate);
+						H3.reserveRoom(guestID, hotel, roomtype, checkindate, checkoutdate, 0); //temp change to eliminate compile error
 						System.out.println(guestID+"reserved! with "+roomtype+" "+checkindate+" to "+checkoutdate+" in "+hotel);			
 					}
 					break;
@@ -193,12 +193,12 @@ public class DHRS_Client {
 						int checkindate1=Integer.parseInt(info[3]);
 						int checkoutdate1=Integer.parseInt(info[4]);
 						if(otherhotel.equals("H2")){
-							H2.reserveRoom(id, otherhotel, roomtype1, checkindate1, checkoutdate1);
-							System.out.println(id+"reserved! with "+roomtype1+" "+checkindate1+" to "+checkoutdate1+" in "+otherhotel);	
+							H2.reserveRoom(id, otherhotel, roomtype1, checkindate1, checkoutdate1, 0); //temp change to eliminate compile error);
+							System.out.println(id+"reserved! with "+roomtype1+" "+checkindate1+" to "+checkoutdate1+" in "+otherhotel);
 						}
 						if(otherhotel.equals("H3")){
-							H3.reserveRoom(id, otherhotel, roomtype1, checkindate1, checkoutdate1);
-							System.out.println(id+"reserved! with "+roomtype1+" "+checkindate1+" to "+checkoutdate1+" in "+otherhotel);	
+							H3.reserveRoom(id, otherhotel, roomtype1, checkindate1, checkoutdate1, 0); //temp change to eliminate compile error);
+							System.out.println(id+"reserved! with "+roomtype1+" "+checkindate1+" to "+checkoutdate1+" in "+otherhotel);
 						}	
 					}
 					if(hotel4.equals("H2")){
@@ -211,11 +211,11 @@ public class DHRS_Client {
 						int checkindate5=Integer.parseInt(info[3]);
 						int checkoutdate5=Integer.parseInt(info[4]);
 						if(otherhotel2.equals("H1")){
-							H1.reserveRoom(id2, otherhotel2, roomtype5, checkindate5, checkoutdate5);
+							H1.reserveRoom(id2, otherhotel2, roomtype5, checkindate5, checkoutdate5, 0); //temp change to eliminate compile error);
 							System.out.println(id2+"reserved! with "+roomtype5+" "+checkindate5+" to "+checkoutdate5+" in "+otherhotel2);	
 						}
 						if(otherhotel2.equals("H3")){
-							H3.reserveRoom(id2, otherhotel2, roomtype5, checkindate5, checkoutdate5);
+							H3.reserveRoom(id2, otherhotel2, roomtype5, checkindate5, checkoutdate5, 0); //temp change to eliminate compile error);
 							System.out.println(id2+"reserved! with "+roomtype5+" "+checkindate5+" to "+checkoutdate5+" in "+otherhotel2);	
 						}	
 					}
@@ -229,11 +229,11 @@ public class DHRS_Client {
 						int checkindate6=Integer.parseInt(info[3]);
 						int checkoutdate6=Integer.parseInt(info[4]);
 						if(otherhotel3.equals("H1")){
-							H1.reserveRoom(id3, otherhotel3, roomtype6, checkindate6, checkoutdate6);
+							H1.reserveRoom(id3, otherhotel3, roomtype6, checkindate6, checkoutdate6, 0); //temp change to eliminate compile error);
 							System.out.println(id3+"reserved! with "+roomtype6+" "+checkindate6+" to "+checkoutdate6+" in "+otherhotel3);	
 						}
 						if(otherhotel3.equals("H2")){
-							H3.reserveRoom(id3, otherhotel3, roomtype6, checkindate6, checkoutdate6);
+							H3.reserveRoom(id3, otherhotel3, roomtype6, checkindate6, checkoutdate6, 0); //temp change to eliminate compile error);
 							System.out.println(id3+"reserved! with "+roomtype6+" "+checkindate6+" to "+checkoutdate6+" in "+otherhotel3);
 						}	
 					}
