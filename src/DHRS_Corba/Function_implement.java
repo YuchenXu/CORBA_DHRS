@@ -1,4 +1,4 @@
-package DHRS;
+package DHRS_Corba;
 
 import java.util.ArrayList;
 import java.util.HashMap;
