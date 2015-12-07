@@ -46,6 +46,7 @@ public class Function_implement extends functionPOA {
 		return "Available "+Available+" Rent: "+rent;
 
 	}
+	
 	private void RoomnumAup(String RoomType){
 		for(int i=0;i<Roominfo.size();i++){
 			if(Roominfo.get(i).Type_of_room==RoomType){
