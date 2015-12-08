@@ -7,10 +7,10 @@ public class Function_implement extends functionPOA {
 	ArrayList<Room> Roominfo = new ArrayList<Room>();
 	HashMap<Integer, Guest> reservationcheck=new HashMap<Integer, Guest>();
 //	int ReservavtionID=0;
-	String hroominfo="";
-	String serviceReport="";
-	String printstaue="";
-	String transferinfo="";
+	//String hroominfo="";
+	//String serviceReport="";
+	//String printstaue="";
+	//String transferinfo="";
 	public Function_implement(int a,int b,int c){
 		for(int i=0;i<a;i++){
 			Roominfo.add(new Room(a,"Single",false,0,0,null));
@@ -100,38 +100,48 @@ public class Function_implement extends functionPOA {
 
 	public String checkAvailability(int GuestID, String Preferredhotel,
 			String RoomType, int checkindate, int checkoutdate) {
+		String hroominfo="";
 		hroominfo+=checkroom(RoomType)+"\n";
 		return hroominfo;
 	}
 
 	public String serviceReport(String hotel, int ServiceDate) {
-		serviceReport="";
+		String serviceReport="";
+		int cnt = 0;
 		for(int i=0;i<Roominfo.size();i++){
 			if(Roominfo.get(i).Checkoutdate==ServiceDate){
 				serviceReport +=i+1+"RoomType: "+Roominfo.get(i).Type_of_room+","+"Checkindate: "+Roominfo.get(i).Checkindate+"Checkoutdate: "+Roominfo.get(i).Checkoutdate+"\n";
+				cnt ++;
 				System.out.println(serviceReport);
 			}
 		}
 
-		return serviceReport;
+		return "Total rooms: " + cnt + ". \n" + serviceReport;
 	}
 
 	public String printSatus(String hotel, int Date) {
-		printstaue="";
+		String printstaue="";
+		int cnt = 0;
+
 		for(int i=0;i<Roominfo.size();i++){
 			printstaue+=i+1+". "+"RoomType: "+Roominfo.get(i).Type_of_room+"Rent: "+Roominfo.get(i).Rent_of_room;
 			if(Roominfo.get(i).Guests!=null){
+				cnt ++;
 			printstaue+="Checkindate: "+Roominfo.get(i).Checkindate+"Checkoutdate: "+Roominfo.get(i).Checkoutdate+"Rent GuestID: "+Roominfo.get(i).Guests.toString()+"\n";
 			}else{
 			printstaue+="Not Rent\n";
 			}
 		}
-		return printstaue;
+		
+		
+		return "Total rooms:" + cnt + ". \n" + printstaue;
 		
 	}
 
 	public String transferReservation(int GuestID, int ReservationID,
 			String CurrentHotel, String OtherHotel) {
+		String transferinfo="";
+		
 		if(reservationcheck.containsKey(ReservationID)){
 			for(int i=0;i<Roominfo.size();i++){
 				if(Roominfo.get(i).Guests.Guestid==GuestID){
@@ -148,6 +158,7 @@ public class Function_implement extends functionPOA {
 					reservationinfo.remove(GuestID);
 //					cancelRoom(GuestID,CurrentHotel,Roominfo.get(i).Type_of_room,Roominfo.get(i).Checkindate,
 //							Roominfo.get(i).Checkoutdate);
+					transferinfo += " Transfer successful!";
 					break;
 				}
 			}
